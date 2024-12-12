@@ -16,6 +16,8 @@ django-redis = "^5.4.0"
 djangorestframework = "^3.15.2"
 markdown = "^3.7"
 django-filter = "^24.3"
+celery = "^5.4.0"
+redis = "^5.2.1"
 
 
 [build-system]
