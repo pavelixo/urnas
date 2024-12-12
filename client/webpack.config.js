@@ -37,7 +37,7 @@ module.exports = {
     },
     extensions: ['.js', '.vue', '.json']
   },
-  watch: true,
+  watch: false,
   watchOptions: {
     ignored: /node_modules/,
     aggregateTimeout: 300,

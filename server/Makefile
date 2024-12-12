@@ -6,6 +6,10 @@ install:
 migrate:
 	poetry run ./manage.py migrate
 
+.PHONY: collectstatic
+collectstatic:
+	poetry run ./manage.py collectstatic --noinput
+
 .PHONY: runserver
 runserver:
 	poetry run daphne -p 8000 core.asgi:application

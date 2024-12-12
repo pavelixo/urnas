@@ -7,5 +7,5 @@ watch:
 	npm run watch
 
 .PHONY: build
-watch:
+build:
 	npm run build
