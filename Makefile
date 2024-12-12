@@ -7,9 +7,13 @@ install:
 	$(MAKE) -C client install
 	$(MAKE) -C server install
 
-.PHONY: start
-start:
+.PHONY: start-server
+start-server:
 	$(MAKE) -C client build
 	$(MAKE) -C server migrate
 	$(MAKE) -C server collectstatic
-	$(MAKE) -C server runserver & $(MAKE) -C server celery
+	$(MAKE) -C server runserver
+
+.PHONY: start-tasks
+start-tasks:
+	$(MAKE) -C server celery
